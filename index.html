@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метод Гаусса</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Подключение Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script> <!-- Подключение плагина для зума -->
+</head>
+<body>
+    <div class="container">
+        <h1>Решение системы линейных уравнений методом Гаусса</h1>
+        <div id="input-section">
+            <h2>Введите коэффициенты системы уравнений</h2>
+            <table id="matrix">
+                <tr>
+                    <td><input type="number" id="a00" value="2"></td>
+                    <td><input type="number" id="a01" value="3"></td>
+                    <td><input type="number" id="a02" value="1"></td>
+                    <td>|</td>
+                    <td><input type="number" id="b0" value="5"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="a10" value="4"></td>
+                    <td><input type="number" id="a11" value="1"></td>
+                    <td><input type="number" id="a12" value="-2"></td>
+                    <td>|</td>
+                    <td><input type="number" id="b1" value="-2"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="a20" value="-2"></td>
+                    <td><input type="number" id="a21" value="3"></td>
+                    <td><input type="number" id="a22" value="2"></td>
+                    <td>|</td>
+                    <td><input type="number" id="b2" value="7"></td>
+                </tr>
+            </table>
+            <button onclick="solve()">Решить</button>
+        </div>
+        <div id="result-section">
+            <h2>Результат:</h2>
+            <p id="result"></p>
+        </div>
+        
+        <!-- График -->
+        <div>
+            <h2>Графическое решение:</h2>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
